@@ -1,7 +1,10 @@
 package controller;
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ResultTreeType;
 import data.model.Register;
+import java.sql.*;
 
 import javax.faces.bean.ManagedBean;
+import javax.swing.plaf.nimbus.State;
 
 @ManagedBean(name = "RegisterControl")
 
@@ -19,6 +22,63 @@ public class RegisterController {
 
    public String sucessReg()
    {
-       return "success";
+       int ph_no=Integer.valueOf(rg.getPhoneNo());
+       try {
+           Class.forName("oracle.jdbc.driver.OracleDriver");
+           Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "Alaska", "alaska_onlineshop");
+           Statement smt = con.createStatement();
+           ResultSet rs = smt.executeQuery("select*from SignUp");
+
+           while (rs.next())
+
+           {
+               if (rg.getPassword().equals(rs.getString("Password"))) {
+
+                   if (ph_no == rs.getInt("phone_no")) {
+
+                       if (rg.getEmail().equals(rs.getString("email"))) {
+                           return "equal";
+
+                           }
+                   }
+               }
+               else {
+
+                   String sql1 = "insert into SignUp(First_name,last_name,city,phone_no,password,email) " +
+                           "values('" + rg.getFirstName() + "','" +rg.getLastName()+"','"+rg.getCity()+"'," +
+                           "" + rg.getPhoneNo() + ",'" + rg.getPassword()+ "','" + rg.getEmail() + "')";
+
+                   smt.executeUpdate(sql1);
+
+
+                   if (rg.getUserType().equalsIgnoreCase("Customer")) {
+                       String sql2 = "update SIGNUP set user_id=(select user_id from ALASKAUSER where user_type='" + rg.getUserType() + "') where password='" + rg.getPassword()+ "'";
+                       smt.executeUpdate(sql2);
+                   } else if (rg.getUserType().equalsIgnoreCase("Administrator")) {
+                       String sql2 = "update SIGNUP set USER_ID=(select user_id from ALASKAUSER where user_type='" +rg.getUserType()+ "') where password='" + rg.getPassword() + "'";
+                       smt.executeUpdate(sql2);
+
+                   }
+
+
+               }
+               rs.close();
+
+               return "success";
+
+
+               }
+           con.close();
+       }
+
+       catch(Exception e)
+       {
+          String ep=String.valueOf(e);
+          rg.setExp(ep);
+
+
+       }
+       return "exception";
+
    }
 }

@@ -13,11 +13,14 @@
         }
         body{
             background-color: deepskyblue;
-            align-self: center;
+           align-items: center;
         }
         h3{
             text-align: center;
             color: black;
+        }
+        h4{
+            text-align: center;
         }
 
 
@@ -33,20 +36,22 @@
 
    <h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvSoa4-2xMZlstH1jjNLw3eY51wOW1kEDNMrhL68o2tW3GMCG_1w" alt="Alaska"></img></h1>
     <h3>Beyond your Dreams,Within your Reach</h3>
-    <h:form>
+    <h:form><br></br>
 
-<h:outputLabel for="Username">
+<h4><h:outputLabel for="Username">
     <h:outputText value="Username: "></h:outputText>
     <h:inputText id="Username" value="#{AlaskaControl.lg.username}"></h:inputText>
 </h:outputLabel><br></br>
+        <br></br>
 
 <h:outputLabel for="Password">
     <h:outputText value="Password: "></h:outputText>
     <h:inputText id="Password" value="#{AlaskaControl.lg.password}"></h:inputText>
 </h:outputLabel><br></br>
+        <br></br>
 
-<h:commandButton value="Sign In" action="#{AlaskaControl.check}"></h:commandButton><br></br>
-        <h:commandButton value="Sign Up" action="Register"></h:commandButton>
+<h:commandButton value="Sign In" action="#{AlaskaControl.check}"></h:commandButton>
+    <h:commandButton value="Sign Up" action="Register"></h:commandButton></h4>
 
 </h:form>
 </h:body>

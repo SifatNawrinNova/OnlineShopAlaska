@@ -9,9 +9,8 @@
     <h1><h:outputLabel value="Success Fully Registered"/><br></br></h1>
 </f:view>
 
-<h:outputText value="#{RegisterControl.rg.firstName} "></h:outputText>
-<h:outputText value="   #{RegisterControl.rg.lastName}"></h:outputText>
-
-
-<h:outputText value="as a #{RegisterControl.rg.userType}"></h:outputText>
+<h:outputText value="Registeration Successful: #{RegisterControl.rg.email}"></h:outputText>
+<h:form>
+    <h:commandButton value="Back to login" action="index"></h:commandButton>
+</h:form>
 </html>

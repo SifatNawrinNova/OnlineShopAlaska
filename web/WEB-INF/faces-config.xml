@@ -23,6 +23,22 @@
             <from-outcome>success</from-outcome>
             <to-view-id>../view/success.xhtml</to-view-id>
         </navigation-case>
+
+        <navigation-case>
+            <from-action>#{RegisterControl.sucessReg}</from-action>
+            <from-outcome>equal</from-outcome>
+            <to-view-id>../view/equal.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-action>#{RegisterControl.sucessReg}</from-action>
+           <from-outcome>exception</from-outcome>
+            <to-view-id>../view/exception.xhtml</to-view-id>
+        </navigation-case>
+
+
     </navigation-rule>
+
+
   
 </faces-config>

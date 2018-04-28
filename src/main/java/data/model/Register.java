@@ -4,11 +4,20 @@ public class Register {
    private String FirstName;
    private String LastName;
    private String password;
-   private String gender;
    private String userType;
    private String email;
    private String city;
    private String PhoneNo;
+
+   private String exp;
+
+    public String getExp() {
+        return exp;
+    }
+
+    public void setExp(String exp) {
+        this.exp = exp;
+    }
 
     public Register() {
     }
@@ -37,13 +46,6 @@ public class Register {
         this.password = password;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 
     public String getUserType() {
         return userType;
