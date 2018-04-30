@@ -9,7 +9,8 @@
     <h1><h:outputLabel value="Success Fully Registered"/><br></br></h1>
 </f:view>
 
-<h:outputText value="Registeration Successful: #{RegisterControl.rg.email}"></h:outputText>
+<h:outputText value="Registeration Successful: #{RegisterControl.rg.email}"></h:outputText><br></br>
+<h:outputText value="Your SignUp ID is #{RegisterControl.rg.signUpID}"></h:outputText>
 <h:form>
     <h:commandButton value="Back to login" action="index"></h:commandButton>
 </h:form>

@@ -44,9 +44,9 @@ public class RegisterController {
                }
                else {
 
-                   String sql1 = "insert into SignUp(First_name,last_name,city,phone_no,password,email) " +
+                   String sql1 = "insert into SignUp(First_name,last_name,city,phone_no,password,email, signUp_DateTime ) " +
                            "values('" + rg.getFirstName() + "','" +rg.getLastName()+"','"+rg.getCity()+"'," +
-                           "" + rg.getPhoneNo() + ",'" + rg.getPassword()+ "','" + rg.getEmail() + "')";
+                           "" + rg.getPhoneNo() + ",'" + rg.getPassword()+ "','" + rg.getEmail() + "',systimestamp)";
 
                    smt.executeUpdate(sql1);
 
@@ -61,13 +61,16 @@ public class RegisterController {
                    }
 
 
+
+                   }
+               rs=smt.executeQuery("Select sign_up_id from signUp where password='"+rg.getPassword()+"'");
+               while(rs.next()) {
+                   rg.setSignUpID(rs.getInt(1));
                }
-               rs.close();
+                  rs.close();
 
-               return "success";
-
-
-               }
+                   return "success";
+                   }
            con.close();
        }
 

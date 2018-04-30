@@ -1,6 +1,7 @@
 package data.model;
 
 public class Register {
+    private int signUpID;
    private String FirstName;
    private String LastName;
    private String password;
@@ -8,8 +9,18 @@ public class Register {
    private String email;
    private String city;
    private String PhoneNo;
-
    private String exp;
+
+    public Register() {
+    }
+
+    public int getSignUpID() {
+        return signUpID;
+    }
+
+    public void setSignUpID(int signUpID) {
+        this.signUpID = signUpID;
+    }
 
     public String getExp() {
         return exp;
@@ -19,8 +30,7 @@ public class Register {
         this.exp = exp;
     }
 
-    public Register() {
-    }
+
 
     public String getFirstName() {
         return FirstName;
