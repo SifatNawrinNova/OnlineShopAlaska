@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <h:outputStylesheet>
+        h1{
+            text-align: center;
+        }
+        body{
+            background-color: deepskyblue;
+           align-items: center;
+        }
+        h3{
+            text-align: center;
+            color: black;
+        }
+        h4{
+            text-align: center;
+        }
+
+
+    </h:outputStylesheet>
+</h:head>
+
+<f:view>
+  <h1>  <h:outputLabel value="Welcome to Alaska"/></h1>
+</f:view>
+
+<h:body>
+
+
+   <h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvSoa4-2xMZlstH1jjNLw3eY51wOW1kEDNMrhL68o2tW3GMCG_1w" alt="Alaska"></img></h1>
+    <h3>Beyond your Dreams,Within your Reach</h3>
+    <h:form><br></br>
+
+<h4><h:outputLabel for="Username">
+    <h:outputText value="Username: "></h:outputText>
+    <h:inputText id="Username" value="#{AlaskaControl.lg.username}"></h:inputText>
+</h:outputLabel><br></br>
+        <br></br>
+
+<h:outputLabel for="Password">
+    <h:outputText value="Password: "></h:outputText>
+    <h:inputText id="Password" value="#{AlaskaControl.lg.password}"></h:inputText>
+</h:outputLabel><br></br>
+        <br></br>
+
+<h:commandButton value="Sign In" action="#{AlaskaControl.check}"></h:commandButton>
+    <h:commandButton value="Sign Up" action="Register"></h:commandButton></h4>
+
+</h:form>
+</h:body>
+</html>

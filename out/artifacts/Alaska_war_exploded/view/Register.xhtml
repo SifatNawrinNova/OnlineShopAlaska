@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <h:outputStylesheet>
+        h1{
+            text-align: center;
+            font-style: italic;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+    </h:outputStylesheet>
+</h:head>
+<f:view>
+    <h1><h:outputLabel value="Register Here "/></h1>
+</f:view>
+
+<h:body>
+
+<h:form>
+    <h:outputLabel for="FirstName">
+        <h:outputText value="First Name: "></h:outputText>
+        <h:inputText id="FirstName" value="#{RegisterControl.rg.firstName}"></h:inputText>
+    </h:outputLabel><br></br>
+    <br></br>
+    <h:outputLabel for="LastName">
+        <h:outputText value="Last Name: "></h:outputText>
+        <h:inputText id="LastName" value="#{RegisterControl.rg.lastName}"></h:inputText>
+    </h:outputLabel>
+    <br></br>
+    <br></br>
+
+    <h:outputLabel for="email">
+        <h:outputText value="email : "></h:outputText>
+        <h:inputText id="email" value="#{RegisterControl.rg.email}"></h:inputText>
+    </h:outputLabel><br></br>
+    <br></br>
+
+    <h:outputLabel for="Password">
+        <h:outputText value="Password: "></h:outputText>
+        <h:inputText id="Password" value="#{RegisterControl.rg.password}"></h:inputText>
+    </h:outputLabel>(password should not be more than 10 characters)<br></br>
+    <br></br>
+
+    <h:outputLabel for="city">
+        <h:outputText value="city : "></h:outputText>
+        <h:inputText id="city" value="#{RegisterControl.rg.city}"></h:inputText>
+    </h:outputLabel><br></br>
+    <br></br>
+
+    <h:outputLabel for="PhoneNo">
+        <h:outputText value="phone No : "></h:outputText>
+        <h:inputText id="PhoneNo" value="#{RegisterControl.rg.phoneNo}"></h:inputText>
+    </h:outputLabel><br></br>
+    <br></br>
+
+    <h:selectOneRadio value="#{RegisterControl.rg.userType}">
+        <f:selectItem id="Customer" itemValue="Customer" itemLabel="Customer"/>
+        <f:selectItem id="Administrator" itemValue="Administrator" itemLabel="Administrator"/>
+    </h:selectOneRadio>
+    <br></br>
+
+    <h:commandButton value="Submit" action="#{RegisterControl.sucessReg}"></h:commandButton>
+
+</h:form>
+</h:body>
+</html>
