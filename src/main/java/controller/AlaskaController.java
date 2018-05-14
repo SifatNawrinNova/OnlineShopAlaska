@@ -35,7 +35,7 @@ public class AlaskaController {
                         smt.executeUpdate("ALTER SESSION SET TIME_ZONE = '+6:00'");
 
                         String str1 = "insert into login(sign_up_id) select SIGN_UP_ID from SIGNUP where email='" + lg.getUsername() + "'";
-                        String str2 = "Update login set log_DateTime=systimestamp where SIGN_UP_ID=(select SIGN_UP_ID from SIGNUP where email='" + lg.getUsername() + "')";
+                        String str2 = "Update login set login_DateTime=systimestamp where SIGN_UP_ID=(select SIGN_UP_ID from SIGNUP where email='" + lg.getUsername() + "')";
                         String str3="delete from LOGIN where sign_up_id=(select sign_up_id from SIGNUP where email='"+lg.getUsername()+"')";
                             smt.executeUpdate(str3);
                             smt.executeUpdate(str1);

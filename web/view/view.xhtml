@@ -14,6 +14,7 @@
         }
         body{
             background-color: aqua;
+            align-items: center;
         }
         h2{
             text-align: center;
@@ -26,10 +27,12 @@
 </f:view>
 
 <h:body>
+   <h:form>
 
-    <h:form>
- <h:commandButton value="Collected products" action="collection"></h:commandButton><br></br>
-        <h:commandButton value="Developers information" action="developer"></h:commandButton><br></br>
+ <h:commandButton value="Collected products" action="Collection"></h:commandButton><br></br>
+        <br></br>
+
+        <h:commandButton value="Developers information" action="#{Developer.viewINFO}"></h:commandButton><br></br>
 
     </h:form>
 </h:body>

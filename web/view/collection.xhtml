@@ -5,21 +5,34 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <h:outputStylesheet>
+        view{
+
+            text-align: center;
+
+        }
+        body{
+            background-color: aqua;
+            align-items: center;
+        }
+        h2{
+            text-align: center;
+        }
+    </h:outputStylesheet>
+</h:head>
 <f:view>
-    <h:outputLabel value="Hello, world"/>
+   <h1> <h:outputLabel value="Select which product you want o see"/></h1><br></br>
 </f:view>
+<h:body>
 <h:form>
+    <h:commandButton value="Men" action="MenCollection"></h:commandButton><br></br>
+    <br></br>
+    <h:commandButton value="Women" action="WomenCollection" ></h:commandButton><br></br>
+    <br></br>
 
-    <h:selectOneRadio value="#{Select.sl.selection}">
-        <f:selectItem itemValue="Men" itemLabel="Men" />
-        <f:selectItem itemValue="Women" itemLabel="Women" />
-        <f:selectItem itemValue="Children" itemLabel="Children" />
-    </h:selectOneRadio>
-
-    <h:commandButton value="Select" action="#{Select.viewselection}"></h:commandButton><br></br>
+    <h:commandButton value="Children" action="ChildrenCollection" ></h:commandButton>
 </h:form>
-
-
-
-
+</h:body>
 </html>

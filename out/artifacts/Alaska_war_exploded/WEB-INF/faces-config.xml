@@ -43,17 +43,67 @@
         </navigation-case>
 
         <navigation-case>
-            <from-action>#{Select.viewSelection}</from-action>
-            <from-outcome>collection</from-outcome>
-            <to-view-id>../view/collection.xhtml</to-view-id>
+            <from-action>#{Winter.viewWinterProduct}</from-action>
+            <from-outcome>MenWinter</from-outcome>
+            <to-view-id>../view/MenWinter.xhtml</to-view-id>
         </navigation-case>
 
-<navigation-case>
-    <from-action>#{Select.viewselection}</from-action>
-    <from-outcome>Men</from-outcome>
-    <to-view-id>../view/Men.xhtml</to-view-id>
-</navigation-case>
+        <navigation-case>
+            <from-action>#{Summer.viewSummerProduct}</from-action>
+            <from-outcome>MenSummer</from-outcome>
+            <to-view-id>../view/MenSummer.xhtml</to-view-id>
+        </navigation-case>
 
+        <navigation-case>
+            <from-action>#{Footwear.viewFootwearProduct}</from-action>
+           <from-outcome>MenFootWear</from-outcome>
+            <to-view-id>../view/MenFootWear.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-action>#{WomSummer.viewSummerProduct}</from-action>
+            <from-outcome>WomenSummer</from-outcome>
+            <to-view-id>../view/WomenSummer.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-action>#{WomWinter.viewWinterProduct}</from-action>
+            <from-outcome>WomenWinter</from-outcome>
+            <to-view-id>../view/WomenWinter.xhtml</to-view-id>
+        </navigation-case>
+
+
+        <navigation-case>
+            <from-action>#{WomFootwear.viewFootwearProduct}</from-action>
+            <from-outcome>WomenFootWear</from-outcome>
+            <to-view-id>../view/WomenFootWear.xhtml</to-view-id>
+        </navigation-case>
+
+
+        <navigation-case>
+            <from-action>#{chSummmer.viewSummerProduct}</from-action>
+            <from-outcome>ChildSummer</from-outcome>
+            <to-view-id>../view/ChildSummer.xhtml</to-view-id>
+        </navigation-case>
+
+
+        <navigation-case>
+            <from-action>#{chWinter.viewWinterProduct}</from-action>
+            <from-outcome>ChildWinter</from-outcome>
+            <to-view-id>../view/ChildWinter.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-action>#{chFootWear.viewFootwearProduct}</from-action>
+            <from-outcome>ChildFootwear</from-outcome>
+            <to-view-id>../view/ChildFootwear.xhtml</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-action>#{Developer.viewINFO}</from-action>
+            <from-outcome>DevelopeInformation</from-outcome>
+            <to-view-id>../view/DevelopeInformation.xhtml</to-view-id>
+        </navigation-case>
 
 
     </navigation-rule>

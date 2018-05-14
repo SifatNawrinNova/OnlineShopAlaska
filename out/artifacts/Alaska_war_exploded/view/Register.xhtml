@@ -42,10 +42,8 @@
     </h:outputLabel><br></br>
     <br></br>
 
-    <h:outputLabel for="Password">
-        <h:outputText value="Password: "></h:outputText>
-        <h:inputText id="Password" value="#{RegisterControl.rg.password}"></h:inputText>
-    </h:outputLabel>(password should not be more than 10 characters)<br></br>
+   Password<h:inputSecret value="#{RegisterControl.rg.password}"></h:inputSecret>
+    <br></br>
     <br></br>
 
     <h:outputLabel for="city">
