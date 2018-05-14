@@ -28,9 +28,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.29" level="application_server_libraries" />
-    <orderEntry type="library" name="ojdbc7" level="project" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-impl:2.2.16" level="project" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-api:2.2.16" level="project" />
     <orderEntry type="library" name="Maven: org.primefaces:primefaces:6.0" level="project" />
+    <orderEntry type="library" exported="" name="ojdbc7" level="project" />
   </component>
 </module>

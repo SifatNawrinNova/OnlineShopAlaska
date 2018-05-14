@@ -42,6 +42,19 @@
             <to-view-id>../view/LogException.xhtml</to-view-id>
         </navigation-case>
 
+        <navigation-case>
+            <from-action>#{Select.viewSelection}</from-action>
+            <from-outcome>collection</from-outcome>
+            <to-view-id>../view/collection.xhtml</to-view-id>
+        </navigation-case>
+
+<navigation-case>
+    <from-action>#{Select.viewselection}</from-action>
+    <from-outcome>Men</from-outcome>
+    <to-view-id>../view/Men.xhtml</to-view-id>
+</navigation-case>
+
+
 
     </navigation-rule>
 

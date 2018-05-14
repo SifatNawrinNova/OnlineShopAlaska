@@ -32,7 +32,7 @@ public class AlaskaController {
                     if(lg.getUsername().equals(rs.getString("email"))) {
                         if (lg.getPassword().equals(rs.getString("password"))) {
                             String str1 = "insert into login(sign_up_id) select SIGN_UP_ID from SIGNUP where email='" + lg.getUsername() + "'";
-                            String str2 = "Update login set login_DateTime=systimestamp where SIGN_UP_ID=(select SIGN_UP_ID from SIGNUP where email='" + lg.getUsername() + "')";
+                            String str2 = "Update login set log_DateTime=systimestamp where SIGN_UP_ID=(select SIGN_UP_ID from SIGNUP where email='" + lg.getUsername() + "')";
                             smt.executeUpdate(str1);
                             smt.executeUpdate(str2);
                             return "view";
