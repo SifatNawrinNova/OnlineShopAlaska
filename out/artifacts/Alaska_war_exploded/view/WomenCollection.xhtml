@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+<h:outputStylesheet>
+    view{
+
+        text-align: center;
+
+    }
+    body{
+        background-color: aqua;
+        align-items: center;
+    }
+    h2{
+        text-align: center;
+    }
+</h:outputStylesheet>
+</h:head>
+<f:view>
+    <h2>Women</h2>
+
+   <b> <h:outputLabel value="Choose Product Type"/></b>
+
+</f:view>
+<h:body>
+<h:form>
+<h:commandButton value="Winter" action="#{WomWinter.viewWinterProduct}"></h:commandButton><br></br>
+<br></br>
+<h:commandButton value="Summer" action="#{WomSummer.viewSummerProduct}"></h:commandButton><br></br>
+    <br></br>
+
+<h:commandButton value="FootWear" action="#{WomFootwear.viewFootwearProduct}" ></h:commandButton><br></br>
+</h:form>
+</h:body>
+
+
+</html>

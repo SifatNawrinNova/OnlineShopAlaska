@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <h:outputStylesheet>
+        view{
+
+            text-align: center;
+
+        }
+        body{
+            background-color: aqua;
+            align-items: center;
+        }
+        h2{
+            text-align: center;
+        }
+    </h:outputStylesheet>
+</h:head>
+<f:view>
+    <h2>Children</h2>
+
+    <b><h:outputLabel value="Here Are the FootWear products for You"/></b>
+</f:view>
+
+<h:body>
+    <h:dataTable value="#{chFootWear.footwearProduct}" var="C">
+        <h:column>ProductId: </h:column>
+        <h:column>#{C.product_ID}</h:column>
+
+
+        <h:column>ProductName:</h:column>
+        <h:column>#{C.productName}</h:column>
+
+        <h:column>ProductSize:</h:column>
+        <h:column>#{C.product_size}</h:column>
+
+        <h:column>Price:</h:column>
+        <h:column>#{C.price}</h:column>
+
+        <h:column><h:form>
+            <h:commandButton value="buy" action="Payment"></h:commandButton>
+        </h:form></h:column>
+
+        <h:column>#{C.exp}</h:column>
+    </h:dataTable>
+</h:body>
+</html>
